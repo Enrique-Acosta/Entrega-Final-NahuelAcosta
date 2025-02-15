@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose"
 
-const cartCollection='cart'
+const cartCollection='carts'
 const cartSchema= new Schema({
     fecha: String,
     monto: Number,
@@ -9,7 +9,11 @@ const cartSchema= new Schema({
             product:{
                 type: Schema.Types.ObjectId,
                 ref:'product'
-            }
+            },
+            quantity: { 
+                type: Number, 
+                default: 1 
+            },
         }],
         default: []
     }

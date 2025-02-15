@@ -15,10 +15,10 @@ router.get('/', async (req, res)=>{
     }
     const filter = {};
     if (query.category) {
-        filter.category = query.category; // Filtrar por categoría
+        filter.category = query.category; 
     }
     if (query.available) {
-        filter.status = query.available === 'true'; // Filtrar por disponibilidad usando "status"
+        filter.status = query.available === 'true';
     }
     const opcion ={
         limit: query.limit || 10,
